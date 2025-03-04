@@ -4,7 +4,6 @@ import com.colak.springtutorial.jpa.Product;
 import com.colak.springtutorial.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,10 +17,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Slf4j
 public class ProductService {
+
     private final GenericSearchService<Product> searchService;
 
     private final ProductRepository productRepository;
-
 
     @Transactional
     public List<Product> searchProducts(String searchTerm) {

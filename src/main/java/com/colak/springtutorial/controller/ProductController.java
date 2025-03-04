@@ -3,7 +3,6 @@ package com.colak.springtutorial.controller;
 import com.colak.springtutorial.jpa.Product;
 import com.colak.springtutorial.service.ProductService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +18,7 @@ public class ProductController {
 
     private final ProductService productService;
 
+    // GET http://localhost:8080/api/products/search?query=product
     @GetMapping("/search")
     public ResponseEntity<?> searchProducts(@RequestParam String query) {
 

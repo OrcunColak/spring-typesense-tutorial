@@ -11,8 +11,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-@Slf4j
 @org.springframework.context.annotation.Configuration
+@Slf4j
 public class TypesenseConfig {
     @Value("${typesense.api-key}")
     private String apiKey;
@@ -46,9 +46,7 @@ public class TypesenseConfig {
         } catch (Exception e) {
             log.error("Failed to connect to Typesense server", e);
         }
-
         return client;
     }
-
 
 }
